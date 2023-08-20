@@ -1,4 +1,102 @@
-export default questionData = [
+export default [
+  {
+    title: "示範：正常",
+    arrow: (
+      <div className="navbar_arrow">
+        <a href="{{ url_for('pages', page='question1') }}"><span className="arrow arrow1"></span></a>
+        <a href="{{ url_for('pages', page='question1') }}"><span className="arrow arrow2"></span></a>
+        <a href="{{ url_for('pages', page='question1') }}"><span className="arrow arrow3"></span></a>
+      </div>
+    ),
+    question: "有一25歲女性病人因運動完喘得很厲害來到急診。初步診視病人體溫37.1度，心跳120次/分，呼吸速率30次/分，血壓140/90。你為她做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：",
+    PaO2: 90,
+    PaCO2: 40,
+    HCO3: 25.5,
+    pH: 7.4,
+    Na: 140,
+    Cl: 100,
+    Hb: 11,
+    Albumin: 40,
+    ref_list: (
+      <div>
+        <div>
+          <h3>這是幫助你測驗對呼吸性與代謝性酸鹼中毒學習成果的網頁，<br />請閱讀完病人的檢驗數據之後：</h3>
+          <h3>Step 1：判斷中毒類型並下滑作答</h3>
+          <ol className="ref_list">
+            <li>
+              <b>判斷數值：</b><br />
+              經由pH、PaCO<sub>2</sub>與[HCO<sub>3</sub><sup>-</sup>]的變化判斷為哪一種中毒。
+              <table className="ref_table_num">
+                <thead>
+                  <tr>
+                    <td></td>
+                    <td>pH</td>
+                    <td>PaCO<sub>2</sub></td>
+                    <td>HCO<sub>3</sub><sup>-</sup></td>
+                    <td>PaO<sub>2</sub></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>正常值</td>
+                    <td>7.35-7.45</td>
+                    <td>35-45 mmHg</td>
+                    <td>22-26 mEq/L</td>
+                    <td>80-100 mmHg</td>
+                  </tr>
+                  <tr>
+                    <td>Case</td>
+                    <td>7.4</td>
+                    <td>40</td>
+                    <td>25.5</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td>判斷</td>
+                    <td>正常</td>
+                    <td>正常</td>
+                    <td>正常</td>
+                    <td>正常</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <b>判斷急性或慢性：</b><br />
+              代謝性中毒難以從數據判斷急性或慢性，在此忽略不討論，呼吸性中毒需判斷急性與慢性。
+            </li>
+            <li>
+              <b>Anion gap：</b><br />
+              代謝性酸中毒需經由Anion gap變化判斷屬於哪種代謝酸中毒。
+            </li>
+            <li>
+              <b>結論：</b><br />
+              得出病人診斷結果。
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
+    additional: (
+      <div>
+        <h3>Step 2：作答完看中毒原因與症狀</h3>
+        <h3>右上角指引說明</h3>
+        <ol>
+          {/* ... (list items content) */}
+        </ol>
+        <h3><br />～開始為病人做診斷吧～</h3>
+      </div>
+    )
+  },
   {
     title: '教案一',
     arrow: (
@@ -28,11 +126,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        {/* ... Answer button content */}
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -71,11 +172,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        {/* ... Answer button content */}
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -112,19 +216,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -161,19 +260,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -210,19 +304,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -259,19 +348,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -308,19 +392,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -357,19 +436,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -406,19 +480,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -456,19 +525,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -505,19 +569,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -554,19 +613,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -603,19 +657,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -652,19 +701,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -701,19 +745,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -750,19 +789,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -799,19 +833,14 @@ export default questionData = [
         {/* ... Ref List content */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        <div className="diagnosis_1layer_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block wrong_block">
-          {/* ... Answer button content */}
-        </div>
-        <div className="diagnosis_2layer_block right_block">
-          {/* ... Answer button content */}
-        </div>
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
@@ -850,11 +879,14 @@ export default questionData = [
         {/* ... Content of ref_list */}
       </ol>
     ),
-    answer_button: (
-      <div>
-        {/* ... Content of answer_button */}
-      </div>
-    ),
+    answer_button: [
+      [true, false, false, false, false],
+      [true],
+      [false, false, false, false],
+      [false],
+      [false],
+      [false]
+    ],
     additional: (
       <div>
         <h3>中毒原因與症狀</h3>
